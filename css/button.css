@@ -1,0 +1,140 @@
+.btn {
+  color: #ff4757;
+  font-family: 'Bree Serif', serif;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  padding: 7px 20px 10px;
+  margin: 15px 7px;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 0 5px #ff4757;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  width: 300px;
+}
+
+.btn:before,
+.btn:after,
+.btn span:before,
+.btn span:after {
+  content: "";
+  background: #ff4757;
+  opacity: 0;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: -1;
+  -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 30% 100%);
+  clip-path: polygon(0 0, 100% 0, 70% 100%, 30% 100%);
+  transition: all 0.4s ease-in-out;
+}
+
+.btn:after {
+  top: auto;
+  bottom: 100%;
+  -webkit-clip-path: polygon(30% 0, 70% 0, 100% 100%, 0 100%);
+  clip-path: polygon(30% 0, 70% 0, 100% 100%, 0 100%);
+}
+
+.btn span:before,
+.btn span:after {
+  background: #ff6b81;
+  width: 30%;
+  height: 100%;
+  top: 0;
+  left: auto;
+  right: 100%;
+  -webkit-clip-path: polygon(0 50%, 100% 100%, 100% 0);
+  clip-path: polygon(0 50%, 100% 100%, 100% 0);
+}
+
+.btn span:after {
+  right: auto;
+  left: 100%;
+  -webkit-clip-path: polygon(0 100%, 100% 50%, 0 0);
+  clip-path: polygon(0 100%, 100% 50%, 0 0);
+}
+
+.btn:hover:before,
+.btn:hover:after,
+.btn:hover span:before,
+.btn:hover span:after {
+  opacity: 1;
+}
+
+.btn:hover:before {
+  top: 0;
+}
+
+.btn:hover:after {
+  bottom: 0;
+}
+
+.btn:hover span:before {
+  right: 0;
+}
+
+.btn:hover span:after {
+  left: 0;
+}
+
+.btn.orange {
+  color: #fc5f20;
+  box-shadow: 0 0 5px #fc5f20;
+}
+
+.btn.orange:before,
+.btn.orange:after {
+  background: #fc5f20;
+}
+
+.btn.orange span:before,
+.btn.orange span:after {
+  background: #ff7f50;
+}
+
+.btn.blue {
+  color: #1e90ff;
+  box-shadow: 0 0 5px #1e90ff;
+}
+
+.btn.blue:before,
+.btn.blue:after {
+  background: #1e90ff;
+}
+
+.btn.blue span:before,
+.btn.blue span:after {
+  background: #70a1ff;
+}
+
+.btn.green {
+  color: #2ed573;
+  box-shadow: 0 0 5px #2ed573;
+}
+
+.btn.green:before,
+.btn.green:after {
+  background: #2ed573;
+}
+
+.btn.green span:before,
+.btn.green span:after {
+  background: #7bed9f;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+  .btn {
+    margin-bottom: 20px;
+  }
+}
